@@ -1,4 +1,5 @@
 import React from 'react'
+import Herosection from '../Herosection';
 
 
 
@@ -7,7 +8,9 @@ function Home() {
   return (
     <>
   
-<div>hello</div>
+<div>
+  <Herosection></Herosection>
+</div>
   
    
    

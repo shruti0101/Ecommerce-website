@@ -1,7 +1,150 @@
-.head-nav{
-    background-color: #F0F2EE!important;
+
+/* making the navbar sticky */
+
+.head-nav {
+  background-color: #FFFFFF !important;
+  position: sticky; /* Change to sticky */
+  top: 0; /* Stick to the top */
+  z-index: 1000; /* Ensure it appears above other content */
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: none; /* Initial state without shadow */
+}
+.head-nav.sticky {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow when sticky */
 }
 
-.nav-container{
-    max-width: 1100px;
+
+.nav-container {
+  max-width: 1100px;
+}
+
+.navbar-nav {
+  flex: 1;
+}
+
+.nav-item {
+  position: relative; /* Ensure the pseudo-element is positioned relative to the nav item */
+}
+
+.nav-link {
+  position: relative; /* Position relative to allow absolute positioning of the underline */
+  color: rgb(39, 37, 37);
+  font-weight: 500;
+  font-size: 15px;
+  padding-top: 11px;
+}
+
+.nav-link::after {
+  content: ""; /* Empty content for the pseudo-element */
+  position: absolute; /* Position absolutely */
+  left: 0; /* Align to the left */
+  bottom: -2px; /* Position it slightly below the nav link */
+  height: 2px; /* Height of the underline */
+  width: 100%; /* Full width */
+  background-color: #DD9933; /* Yellow color */
+  transform: scaleX(0); /* Initially scale it down to 0 */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Only apply the hover effect to the main nav links */
+.nav-item:not(.dropdown) .nav-link:hover::after {
+  transform: scaleX(1); /* Scale it to full width on hover */
+}
+
+.nav-item.active .nav-link {
+  color: #DD9933; 
+  font-weight: bold; 
+}
+
+.nav-link:hover {
+  color: #DD9933;
+}
+
+.nav-link .active {
+  color: #DD9933;
+}
+
+.dropdown-item {
+  font-size: 13px;
+  position: relative; /* Make the circle position relative to the item */
+  padding-left: 25px; /* Add padding to make space for the circle */
+}
+
+.dropdown-item::before {
+  content: "";
+  position: absolute;
+  left: 5px; /* Position it inside the dropdown */
+  top: 50%;
+  transform: translateY(-50%) scale(0); /* Start scaled down */
+  width: 10px; /* Circle diameter */
+  height: 10px; /* Circle diameter */
+  background-color: #DD9933; /* Circle color */
+  border-radius: 50%; /* Makes it a circle */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.dropdown-item:hover::before {
+  transform: translateY(-50%) scale(1); /* Scale up on hover */
+}
+
+.dropdown-item:hover {
+  color: #DD9933;
+  background: none; /* Optional: Change background on hover */
+}
+
+.signup-btn {
+  border: unset;
+}
+
+.login-btn {
+  border: unset;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.btn1 {
+  background-color: rgb(34, 32, 32);
+  color: whitesmoke;
+  font-size: 14px;
+  padding: 5px 18px;
+  border-radius: 5px;
+}
+
+.btn1:hover {
+  background-color: #d2a158;
+}
+
+/* From Uiverse.io by reshades */
+.button2 {
+  background-color: rgb(34, 32, 32);
+  color: #fff;
+  padding: 5px 4px;
+  border: #101011 0.14em solid;
+  border-radius: 5px;
+  transition: all 0.6s ease;
+  font-size: 14px;
+  width: 5.2rem;
+}
+
+.button2:hover {
+  background-color: #d2a158;
+  cursor: pointer;
+}
+
+.button2 svg {
+  padding-top: 2px;
+  width: 1.2em;
+  position: absolute;
+  display: flex;
+  transition: all 0.6s ease;
+}
+
+.button2:hover svg {
+  transform: translateX(5px);
+}
+
+.text2 {
+  margin: 0 1.5em;
 }
