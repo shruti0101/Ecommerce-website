@@ -8,6 +8,7 @@
   z-index: 1000; /* Ensure it appears above other content */
   transition: all 0.3s ease; /* Smooth transition */
   box-shadow: none; /* Initial state without shadow */
+  padding: 5px;
 }
 .head-nav.sticky {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow when sticky */
@@ -92,13 +93,7 @@
   background: none; /* Optional: Change background on hover */
 }
 
-.signup-btn {
-  border: unset;
-}
 
-.login-btn {
-  border: unset;
-}
 
 .dropdown:hover .dropdown-menu {
   display: block;
@@ -147,4 +142,14 @@
 
 .text2 {
   margin: 0 1.5em;
+}
+
+.cart{
+  font-size: 23px; 
+color: #101011;
+}
+.cart:hover{
+color: #DD9933;
+transform: scale(1.1);
+
 }

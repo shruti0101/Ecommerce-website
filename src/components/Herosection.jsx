@@ -3,12 +3,12 @@ import "./Herosection.css";
 
 const Herosection = () => {
   return (
-    <div className="container-fluid main-caro  m-0 p-0">
+    <div className="container-fluid  mt-0 pt-0 m-0 p-0">
       <div
         id="carouselExampleIndicators"
-        className="carousel slide  mt-3 "
-        data-ride="carousel"
-        data-interval="4000"
+        className="carousel slide   "
+        data-bs-ride="carousel"
+        data-interval="2000"
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
@@ -24,7 +24,8 @@ const Herosection = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
                   vitae posuere est Sed placerat ligula
                 </p>
-                <button className="btn">Shop Now</button>
+               
+                <button className="btn  btn-outline-dark">Shop More</button>
               </div>
 
               <div className="overlay"></div>
@@ -44,7 +45,8 @@ const Herosection = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
                   vitae posuere est Sed placerat ligula
                 </p>
-                <button className="btn">Shop Now</button>
+         
+                <button className="btn  btn-outline-dark">Shop More</button>
               </div>
 
               <div className="overlay"></div>
@@ -58,14 +60,14 @@ const Herosection = () => {
                 alt="Third slide"
               />
 
-             <div className="carousel-text-3">
+              <div className="carousel-text-3">
                 <h3>New Collection</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
                   vitae posuere est Sed placerat ligula
-            
                 </p>
-                <button className="btn">Shop Now</button>
+
+                <button className="btn  btn-outline-dark">Shop More</button>
               </div>
 
               <div className="overlay"></div>

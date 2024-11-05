@@ -1,8 +1,13 @@
 import React from "react";
 import "./Navbar.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
+import toast from "react-hot-toast";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  let isloggedIn = props.isloggedIn;
+  let SetisloggedIn = props.SetisloggedIn;
+
   return (
     <div className="head-nav">
       <div className="container-fluid pt-2 nav-container">
@@ -103,32 +108,55 @@ const Navbar = () => {
             {/* Sign Up and Log In Buttons */}
 
             <div className="d-flex gap-3 pt-2">
-              <Link to="/signup">
-                <button className="button2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-                    ></path>
-                  </svg>
+              {!isloggedIn && (
+                <Link to="/signup">
+                  <button className="button2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                      ></path>
+                    </svg>
 
-                  <div class="text2">Signup</div>
-                </button>
-              </Link>
+                    <div className="text2">Signup</div>
+                  </button>
+                </Link>
+              )}
 
-              <Link to="/login">
-                <button type="" className="btn1 btn-outline-dark">
-                  Login
-                </button>
-              </Link>
+              {!isloggedIn && (
+                <Link to="/login">
+                  <button type="" className="btn1 btn-outline-dark">
+                    Login
+                  </button>
+                </Link>
+              )}
+
+              {isloggedIn && (
+                <Link to="/">
+                  <button type="" onClick={()=>{
+                    SetisloggedIn(false)
+                    toast.success("logged out")
+                  }} className="btn1 btn-outline-dark">
+                    logout
+                  </button>
+                </Link>
+              )}
+
+              {isloggedIn && (
+                <Link to="/cart">
+                  <div className="cart">
+                    <FaShoppingCart />
+                  </div>
+                </Link>
+              )}
             </div>
           </div>
         </nav>
