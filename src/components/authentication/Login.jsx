@@ -1,5 +1,5 @@
 import React from 'react'
-import Template from 'authentication/Template'
+ import Template from './Template'
 
 const Login = ({SetisloggedIn}) => {
   return (

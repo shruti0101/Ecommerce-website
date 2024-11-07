@@ -31,7 +31,7 @@ function App() {
         <Route path="/men" element={<Men/>}/>
         <Route path="/women" element={<Women/>}/>
         <Route path="/login" element={<Login SetisloggedIn={SetisloggedIn} />}/>
-        <Route path="/signup" element={<Signup/>}/>
+        <Route path="/signup" element={<Signup SetisloggedIn={SetisloggedIn}/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="*" element={<div>page not found</div>}></Route>
      

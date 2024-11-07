@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Optional: centers vertically within the viewport */
+
+  }
+.form-main{
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+   
+}
+.input-group{
+ color: white;
+
+    padding: 5px;
+}
+input {
+
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+ 
+  
+   
+  }
+
+  
+
